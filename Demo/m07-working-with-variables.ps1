@@ -35,6 +35,20 @@ Write-Host $hi
 # Variables are objects. Show the type
 $hi.GetType()
 
+Get-ChildItem | Get-Member
+
+Clear-Host
+$someNumber = 13.450
+$someNumber
+
+$someNumber.GetType()
+
+$someNumber | Get-Member
+$hi | Get-Member
+
+
+
+
 # Display all the members of this variable (object)
 $hi | Get-Member
 
@@ -164,7 +178,9 @@ $pwd
 $Home  
 
 # Info about a users scripting environment
+Clear-Host
 $host
+
 
 # Process ID
 $PID
