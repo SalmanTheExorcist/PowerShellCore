@@ -66,6 +66,7 @@ Get-Command        # Comments can go here too!
 # Get-Command - Retrieves a list of all loaded cmdlets
 Get-Command
 
+
 # Can expand by searching for just a verb or noun. Here we
 # are using named parameters
 Get-Command -verb "get"
@@ -93,6 +94,10 @@ Get-Help Get-Command -Online   # PS3+ and PS Core
 # Most commands can also be passed a -? paramter to get help
 Get-Command -?
 
+Get-ChildItem -?
+
+Clear-Host
+Get-Command -Noun date
 
 #endregion Cmdlets
 
@@ -119,6 +124,7 @@ cls
 # The answer is command aliasing
 # The alias dir points to the cmdlet Get-Childitem
 Get-Alias dir
+Get-Alias cls
 
 # We can see all of the aliases for a cmdlet
 Get-Alias -Definition Get-ChildItem
