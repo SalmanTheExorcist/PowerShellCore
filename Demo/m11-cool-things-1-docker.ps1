@@ -43,6 +43,7 @@ Set-Location '/Users/arcanecode/Documents/code/pscore/PowerShellCore'
 
   bash ./Demo/m11-install-docker.sh 
 
+
   macOS
   For macOS, it's presumed you followed the instructions in the 
   included document "Install PSCore on macOS.md", found in the Notes
@@ -63,7 +64,9 @@ bash ./Demo/m11-install-docker.sh
   docker commands on macOS.
 #>
 
-sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
+#sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
+sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+
 
 # If you want, you can verify it now exists
 Clear-Host
@@ -96,7 +99,11 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=passW0rd!' \
   Or if you prefer you can just cut and paste this in a single line:
 #>
 
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=passW0rd!' -p 1433:1433 --name arcanesql -d mcr.microsoft.com/mssql/server:2017-latest
+#sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=passW0rd!' -p 1433:1433 --name arcanesql -d mcr.microsoft.com/mssql/server:2017-latest
+
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=P@$$w0rd' -p 1433:1433 --name mylinuxmssqlserver2019 -d mcr.microsoft.com/mssql/server:2019-latest
+
+
 
 # You can verify the container was installed and is running by 
 # listing the containers on your system
